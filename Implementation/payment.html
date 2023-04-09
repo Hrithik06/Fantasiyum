@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Payment</title>
+    <link rel="icon" href="Images/logo1.svg" type="image/x-icon" />
+
+    <!-- <link rel="stylesheet" href="CSS/footer.css"> -->
+
+    <link rel="stylesheet" href="CSS/loader.css">
+    <script>
+        var myVar;
+
+        function myFunction() {
+          // alert("Redirecting to payment page. Pleas don't click back or reload.");
+            myVar = setTimeout(showPage, 2000);
+        }
+
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("myDiv").style.display = "block";
+        }
+    </script>
+
+<link rel="stylesheet" href="CSS/hover.css">
+
+
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.css" rel="stylesheet" />
+
+    <!-- css  end -->
+    <!-- js  -->
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.js"></script>
+    <!-- js end -->
+    
+<style>.icon {
+    width: 60px;
+    height: 60px;
+}</style>
+
+
+</head>
+
+<body onload="myFunction()" style="margin:50px;">
+
+    <div id="loader">
+    
+    </div>
+
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+        <div class="container-fluid" style="border: 1px solid gray; border-radius: 15px;">
+
+
+            <div class="row">
+                <div class="col-9">
+                    <!-- Tabs navs -->
+                    <ul class="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="ex3-tab-1" data-mdb-toggle="tab" href="#ex3-tabs-1"
+                                role="tab" aria-controls="ex3-tabs-1" aria-selected="true"><img src="icons/payment/visa.svg"
+                                    alt="" class="icon"> <img src="icons/payment/master.svg" alt="" class="icon"> 
+                                   <br><h6>Credit/Debit Card</h6> </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="ex3-tab-2" data-mdb-toggle="tab" href="#ex3-tabs-2" role="tab"
+                                aria-controls="ex3-tabs-2" aria-selected="false"><img src="icons/payment/upi.svg" alt=""
+                                    class="icon"><br> <h6>UPI</h6> </a>
+                        </li>
+                    </ul>
+                    <!-- Tabs navs -->
+
+                    <!-- Tabs content -->
+                    <div class="tab-content" id="ex2-content">
+                        <div class="tab-pane fade show active" id="ex3-tabs-1" role="tabpanel"
+                            aria-labelledby="ex3-tab-1">
+                            <!-- Credit/Debit Card -->
+                            <form>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="form-outline" style="border: 5px;">
+                                        <input type="text" id="typeText" class="form-control form-control-lg" size="17"
+                                            placeholder="1234 5678 9012 3457" minlength="19" maxlength="19" />
+                                        <label class="form-label" for="typeText">Card Number</label>
+                                    </div>
+                                   
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div class="form-outline">
+                                        <input type="text" id="typeName" class="form-control form-control-lg" size="17"
+                                            placeholder="Cardholder's Name" />
+                                        <label class="form-label" for="typeName">Cardholder's Name</label>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center pb-2">
+                                    <div class="form-outline">
+                                        <input type="text" id="typeExp" class="form-control form-control-lg"
+                                            placeholder="MM/YYYY" size="7" id="exp" minlength="7" maxlength="7" />
+                                        <label class="form-label" for="typeExp">Expiration</label>
+                                    </div>
+                                    <div class="form-outline">
+                                        <input type="password" id="typeText2" class="form-control form-control-lg"
+                                            placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
+                                        <label class="form-label" for="typeText2">CVV</label>
+                                    </div>
+                                    <button type="button" class="btn btn-primary btn-rounded">
+                                        Proceed
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+
+
+
+                        <div class="tab-pane fade" id="ex3-tabs-2" role="tabpanel" aria-labelledby="ex3-tab-2">
+                            <form>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="form-outline">
+                                        <input type="text" id="typeText" class="form-control form-control-lg"
+                                            placeholder="Enter your UPI ID" />
+                                        <label class="form-label" for="typeText">Enter your UPI ID</label>
+                                    </div>
+                                    <button type="button" class="btn btn-primary btn-rounded">
+                                        Proceed
+                                    </button>
+                                </div>
+                            </form>
+                            <!-- Tabs content -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="p-2 me-3">
+                        <h4>Order Recap</h4>
+                    </div>
+                    <div class="p-2 d-flex">
+                        <div class="col-8">Price</div>
+                        <div class="ms-auto">₹ 100</div>
+                    </div>
+
+                    <div class="border-top px-2 mx-2"></div>
+                    <div class="p-2 d-flex pt-3">
+                        <div class="col-8"><b>Total</b></div>
+                        <div class="ms-auto"><b class="text-success">₹ 100</b></div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+    
+
+</body>
+
+</html>
